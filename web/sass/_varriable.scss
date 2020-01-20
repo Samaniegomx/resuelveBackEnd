@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Quicksand&display=swap');
+
+// fonts
+
+// fonts-size
+$heebo: 'Heebo', sans-serif;
+
+// Color
+$white: #ffffff;
+$black: #000000;
+$active: #009DFF;
+$h3Color: red;
+$titleColor: #646363;
+$h3bgbefore: blue;
+$pColor: green;
+$colorSlogan: #115468;
+
+// media queries
+$xs_mobile:'(max-width: 420px)';
+$sm_mobile:'only screen and (min-width: 421px) and (max-width: 575px)';
+$small_mobile:'(max-width: 576px)';
+$large_mobile: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$tab:'(max-width: 991px)';
+$medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$big_screen:'only screen and (min-width: 1200px) and (max-width: 1440px)';
+$extra_big_screen: 'only screen and (min-width: 1200px) and (max-width: 3640px)';
