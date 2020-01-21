@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\grid\GridView;
+use yii\widgets\ListView;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Nomina */
@@ -23,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fechaCreacion',
         ],
     ]) ?>
+
 
     <p>
         <?= Html::a('Calcular', ['calcular', 'id' => $model->id_nomina], ['class' => 'btn btn-success']) ?>

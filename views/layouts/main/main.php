@@ -5,13 +5,13 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap4\NavBar;
-use yii\bootstrap4\Nav;
+use yii\bootstrap\NavBar;
+use yii\bootstrap\Nav;
 use yii\widgets\Breadcrumbs;
-// use app\assets\AppAsset;
-use app\assets\OwnAsset;
+use app\assets\AppAsset;
+// use app\assets\OwnAsset;
 
-OwnAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

@@ -1,5 +1,6 @@
-.container{
-    width: 90%;
+.container-fluid{
+    width: 100%;
+    background-color: red;
 }
 /* Normal desktop :1200px. */
 $large_device:'(min-width: 1200px) and (max-width: 1500px)';

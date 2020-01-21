@@ -8,7 +8,6 @@
 namespace yii\debug\panels;
 
 use Yii;
-use yii\base\InlineAction;
 use yii\debug\models\Router;
 use yii\debug\Panel;
 use yii\log\Logger;
@@ -66,14 +65,6 @@ class RouterPanel extends Panel
     /**
      * {@inheritdoc}
      */
-    public function getSummary()
-    {
-        return Yii::$app->view->render('panels/router/summary', ['panel' => $this]);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getDetail()
     {
         return Yii::$app->view->render('panels/router/detail', ['model' => new Router($this->data)]);
@@ -84,19 +75,9 @@ class RouterPanel extends Panel
      */
     public function save()
     {
-        if (Yii::$app->requestedAction) {
-            if (Yii::$app->requestedAction instanceof InlineAction) {
-                $action = get_class(Yii::$app->requestedAction->controller) . '::' . Yii::$app->requestedAction->actionMethod . '()';
-            } else {
-                $action = get_class(Yii::$app->requestedAction) . '::run()';
-            }
-        } else {
-            $action = null;
-        }
+        $target = $this->module->logTarget;
         return [
-            'messages' => $this->getLogMessages(Logger::LEVEL_TRACE, $this->_categories),
-            'route'    => Yii::$app->requestedAction ? Yii::$app->requestedAction->getUniqueId() : Yii::$app->requestedRoute,
-            'action'   => $action,
+            'messages' => $target::filterMessages($target->messages, Logger::LEVEL_TRACE, $this->_categories)
         ];
     }
 }

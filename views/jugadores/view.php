@@ -31,8 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-    <p>
-        <?= Html::a('Actualizar', ['update', 'id' => $model->id_jugadores], ['class' => 'btn btn-primary']) ?>
+    <p class="col-md-6">
+        <?= Html::a('Regresar', [Yii::$app->request->referrer], ['class' => 'btn btn-info']) ?>
+    </p>
+    <p class="col-md-6 pull-right">
+        <?= Html::a('Actualizar', ['update', 'id' => $model->id_jugadores], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Eliminar', ['delete', 'id' => $model->id_jugadores], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -40,6 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-    </p>
 
+    </p>
+    
 </div>

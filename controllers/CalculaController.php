@@ -84,10 +84,6 @@ class CalculaController extends ActiveController
 
             $calc->attributes = $data;
 
-            $data['goles_minimos'] = $nivel[$data['nivel']];
-
-            unset($data['nivel']);
-
             if($calc->save())
             {
                 $datas[] = $data;

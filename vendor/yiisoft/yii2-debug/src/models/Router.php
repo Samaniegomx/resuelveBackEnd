@@ -23,14 +23,6 @@ class Router extends Model
      */
     public $messages = [];
     /**
-     * @var string logged route.
-     */
-    public $route = '';
-    /**
-     * @var string logged action.
-     */
-    public $action = '';
-    /**
      * @var string|null info message.
      */
     public $message;

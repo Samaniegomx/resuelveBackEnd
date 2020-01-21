@@ -57,8 +57,11 @@ class NominaController extends Controller
      */
     public function actionView($id)
     {
+        $modelDetail = NominaDetalle::find()->where(["id_nomina" => $id])->all();
+                                                    // (['id' => 1]
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'modelDetail' => $modelDetail,
         ]);
     }
 
