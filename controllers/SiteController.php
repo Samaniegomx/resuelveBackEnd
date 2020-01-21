@@ -9,9 +9,6 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Productos;
-use Goutte\Client;
-use GuzzleHttp\Client as GuzzleClient;
 
 class SiteController extends Controller
 {
