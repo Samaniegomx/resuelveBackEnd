@@ -9,9 +9,14 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Productos;
+use Goutte\Client;
+use GuzzleHttp\Client as GuzzleClient;
 
 class SiteController extends Controller
 {
+
+    public $layout = 'main/main';
     /**
      * {@inheritdoc}
      */
@@ -126,13 +131,4 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    /**
-     * Displays Resuelve page.
-     *
-     * @return string
-     */
-    public function actionSaluda()
-    {
-        return $this->render('saluda');
-    }
 }
